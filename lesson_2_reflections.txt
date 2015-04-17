@@ -1,0 +1,3 @@
+Q 1:What happens when you initialize a repository? Why do you need to do it?
+A: Creates an empty Git repository - basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files. An initial HEAD file that references the HEAD of the master branch is also created.
+
