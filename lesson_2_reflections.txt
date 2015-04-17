@@ -1,3 +1,6 @@
 Q 1:What happens when you initialize a repository? Why do you need to do it?
 A: Creates an empty Git repository - basically a .git directory with subdirectories for objects, refs/heads, refs/tags, and template files. An initial HEAD file that references the HEAD of the master branch is also created.
 
+Q 2: How is the staging area different from the working directory and the repository? What value do you think it offers?
+A: The staging area enables to "cache" the files that were modified and will be used part of the next commit. It make spossible to verify which files were changed, enabling the user to double check for unwanted modifications to be part of the commit, like a typo by mistake in a file that was just used to be readen, but was editted.
+
