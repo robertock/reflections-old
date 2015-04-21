@@ -1,1 +1,30 @@
-When would you want to create a remote repository rather than keeping all your work local?
+Q 1: When would you want to create a remote repository rather than keeping all your work local?
+A 1: To keep it acessible remotely, shareable and accessible to other contributors. Also, having a copy outside your computer can be realiable, as even if your computer crash, you may have almost none losses.
+
+
+Q 2: Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+A 2: Because this way you can control what is going to be pushed and review what is necessary to be pushed and made available to the other comtributors.
+
+Q 3: Describe the differences between forks, clones, and branches. When would you use one instead of another?
+A 3: Forks are used to create a copy of a project, but modify it and do not merge it with the original one. It's like copy a program source, edit and ajust what you think it's necessay, creating a new one.
+ Clone is like the name says, have a complete copy of repository.
+ Branches are the new small implementations that can be merged to the master, or not.
+
+Q 4: What is the benefit of having a copy of the last known state of the remote stored locally?
+A 4: In case you mess up things, or you need to recover part of the state of a project, you can do it. Also, you may not worry too much to scramble the local data, but, keeping in mind to do not demage the project.
+
+Q 5: How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+A 5: Without GitHub it'd be harder, would need a tremendous sense of organization and would require to have as less possible people working on ti as possible.
+
+Q 6:
+Reflect: When to use a separate branch
+
+You just saw that the workflow when making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. Rather than simply pulling and pushing, you need to pull changes into your local master branch, merge the local master into your branch (different-oil, in our case), then push your branch to the remote before finally merging your branch into master, either locally or on GitHub.
+
+Given that, please add the following question and your thoughts on it to your reflections file:
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+To avoid contaminate the master branch with unstable code/features that are under development or were not yet tested and signed out as "good to go" to master (aka, last stable version).
+
+
