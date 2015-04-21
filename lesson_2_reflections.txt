@@ -4,3 +4,24 @@ A: Creates an empty Git repository - basically a .git directory with subdirector
 Q 2: How is the staging area different from the working directory and the repository? What value do you think it offers?
 A: The staging area enables to "cache" the files that were modified and will be used part of the next commit. It make spossible to verify which files were changed, enabling the user to double check for unwanted modifications to be part of the commit, like a typo by mistake in a file that was just used to be readen, but was editted.
 
+Q 3: How can you use the staging area to make sure you have one commit per logical change?
+A: The index / staging area is essentially a "holding area" for changes that will be committed when you next do git commit. That is, unlike other VCSs, a "commit" operation does not simply take the current working tree and check it as-is into the repository. The index allows you to control what parts of the working tree go into the repository on the next "commit" operation.
+
+Staging helps you split up one large change into multiple commits. Before you commit, you'll probably review the whole change by using git diff. If you stage each change as you review it, you'll find that you can concentrate better on the changes that are not yet staged.
+
+Since the working directory and what gets saved by Git are essentially decoupled, this allows the developer to build up their commits however they want, and not in a fashion where the VCS tells you. Since there’s a layer between when Git actually saves the data, you gain a lot more flexibility and control.
+Using the index is quite simple with the git add and git commit commands. Basically, you add files onto the index, and once you’re satisfied with the changes commit them
+
+Q 4: What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+A: Branches can help to keep the master stable while implementing new versions or modifications that we are unkonw if will work or not, whitout needing to put in risk the stable code.
+
+Q 5: How do the diagrams help you visualize the branch structure?
+A: It helps to understand that if no branch is checkedout from master, it1ll be lost.
+
+Q 6: What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+A: It results in adding all the changes to both branches into the master.
+
+Q 7: What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+A: Automatic merging may commit conflicts and turn the master branch unstable. Doing merges manually allows such kind of situation to not happen, or at least, be reviewed first.
+
+
